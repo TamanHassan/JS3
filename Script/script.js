@@ -3,15 +3,17 @@ function isValidPassword (password, username) {
         return false;
         }
 
-    if (password.includes(" ")) {
+     else if (password.includes(" ")) {
         return false;
         }
 
-    if (password.toLowerCase().includes(username.toLowerCase())) {
+    else if (password.toLowerCase().includes(username.toLowerCase())) {
         return false;
-         }
+         } else {
          return true;
           }
+          }
+
 
     console.log(isValidPassword("securePass1", "user"));
     console.log(isValidPassword("user12345", "user"));
