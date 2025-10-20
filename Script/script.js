@@ -7,8 +7,13 @@ function isValidPassword (password, username) {
         return false;
         }
 
-    if (password.includes(username)) {
+    if (password.toLowerCase().includes(username.toLowerCase())) {
         return false;
          }
          return true;
           }
+
+    console.log(isValidPassword("securePass1", "user"));
+    console.log(isValidPassword("user12345", "user"));
+    console.log(isValidPassword("short", "user"));
+    console.log(isValidPassword("no space", "user"));
